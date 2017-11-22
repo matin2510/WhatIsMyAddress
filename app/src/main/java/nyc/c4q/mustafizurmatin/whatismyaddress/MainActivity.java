@@ -15,8 +15,9 @@ public class MainActivity extends AppCompatActivity {
     Button Save;
     Button switchToRecyclerView;
     SharedPreferences sharedPreferences;
-    String Email = "emailKey";
+    String emailAddress = "emailKey";
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String emailData = editText.getText().toString();
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(Email,emailData);
+                editor.putString(emailAddress,emailData);
                 editor.commit();
 
                 editText.setText("");
