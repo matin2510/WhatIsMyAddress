@@ -26,6 +26,11 @@ public class RecyclerActivity extends AppCompatActivity {
         //dataRecieved= i.getStringExtra("sharedpref",);
 
 
+
+        Intent intent = new Intent(RecyclerActivity.this, DisplayActivity.class);
+
+
+
         Map<String,?> keys = sharedPreferences.getAll();
 
         for(Map.Entry<String,?> entry : keys.entrySet()){
